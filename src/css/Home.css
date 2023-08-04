@@ -1,0 +1,144 @@
+.body {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr auto 1fr;
+    height: 100%;
+}
+
+.gamemode {
+    padding: 0.5rem;
+    border-radius: 120px;
+    background-color: var(--sec-color);
+    height: fit-content;
+    width: fit-content;
+}
+
+.gamemode-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.gamemode-item button {
+    border-radius: 120px;
+}
+
+.gamemode-button {
+    align-items: baseline;
+    display: grid;
+    justify-content: center;
+    gap: 0.25rem;
+    align-items: center;
+    grid-auto-flow: column;
+    width: -moz-available;
+    width: 165px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.gamemode-button:hover {
+    background-color: var(--bg-color);
+}
+
+.gamemode-current {
+    background-color: var(--bg-color);
+}
+
+.gamemode-button i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--sub-color);
+}
+
+.gamemode-current i {
+    background-color: var(--main-color);
+}
+
+.gamemode-button p {
+    color: var(--sub-color);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fa-campaign {
+    -webkit-mask-image: url(../assets/images/map.svg);
+    mask-image: url(../assets/images/map.svg);
+}
+
+.fa-challenge {
+    -webkit-mask-image: url(../assets/images/chart.svg);
+    mask-image: url(../assets/images/chart.svg);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.input-box,
+.notif-box {
+    text-align: center;
+}
+
+input {
+    outline: none;
+    border: none;
+    margin: 0 0 20px 10px;
+    padding: 8px 5px 0 0;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 1px dashed #5b727f;
+}
+
+button {
+    background-color: transparent;
+    border: 1px dashed #fff;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.game-box {
+    width: 350px;
+    height: 150px;
+    background-color: var(--sec-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-box {
+    text-align: center;
+}
+
+.number-box {
+    display: grid;
+    justify-items: center;
+    font-size: 36px;
+    color: var(--error-color);
+}
+
+.info-box {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 60vh;
+}
+
+.level {
+    color: var(--level-color);
+}
+
+.mistakes {
+    color: var(--error-color);
+}

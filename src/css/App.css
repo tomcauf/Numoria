@@ -1,0 +1,22 @@
+#root {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1000px) auto;
+  justify-items: center;
+}
+
+#centerContent {
+  display: grid;
+    gap: 2rem;
+    grid-auto-flow: row;
+    grid-template-rows: auto 1fr auto;
+    max-width: 1000px;
+    min-height: 100vh;
+    padding: 2rem;
+    transition: padding-top .125s;
+    width: 100%;
+    z-index: 999;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}

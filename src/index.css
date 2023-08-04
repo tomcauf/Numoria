@@ -1,0 +1,93 @@
+@import url('./css/Theme.css');
+:root {
+  font-family: Fira Mono, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--sub-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.textButton {
+  align-items: baseline;
+  display: grid;
+  gap: 0.25rem;
+  align-items: center;
+  grid-auto-flow: column;
+  width: -moz-available;
+  width: max-content;
+  cursor: pointer;
+}
+
+.textButton i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.textButton p {
+  color: #4e5973;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.fas {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--sub-color);
+}
+
+.textButton:focus, .textButton:hover * {
+  color: #CCCCB5;
+}
+.textButton:hover i {
+  background-color: #CCCCB5;
+}

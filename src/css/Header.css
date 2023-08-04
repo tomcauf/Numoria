@@ -1,0 +1,59 @@
+header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto 1fr auto;
+    grid-auto-flow: column;
+    width: 100%;
+    font-size: 1rem;
+    gap: 1rem;
+    line-height: 1rem;
+}
+
+header h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #CCCCB5;
+}
+
+.fa-leaderboard {
+    -webkit-mask-image: url(../assets/images/leaderboard.svg);
+    mask-image: url(../assets/images/leaderboard.svg);
+}
+
+.fa-settings {
+    -webkit-mask-image: url(../assets/images/settings.svg);
+    mask-image: url(../assets/images/settings.svg);
+}
+
+.fa-notification {
+    -webkit-mask-image: url(../assets/images/notification.svg);
+    mask-image: url(../assets/images/notification.svg);
+}
+
+.fa-unregistered {
+    -webkit-mask-image: url(../assets/images/unregistered.svg);
+    mask-image: url(../assets/images/unregistered.svg);
+}
+
+.fa-logged {
+    -webkit-mask-image: url(../assets/images/logged.svg);
+    mask-image: url(../assets/images/logged.svg);
+}
+
+.fa-logout {
+    -webkit-mask-image: url(../assets/images/logout.svg);
+    mask-image: url(../assets/images/logout.svg);
+}
+
+@media screen and (max-width: 62.5rem) {}
+
+@media screen and (max-width: 34.375rem) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    header i {
+        width: 1.3rem;
+        height: 1.3rem
+    }
+}
