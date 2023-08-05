@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MemoryGame from "../pages/home/MemoryGame.jsx";
-import "../css/Home.css";
+import MemoryGame from "./MemoryGame.jsx";
+import "../../css/Home.css";
 
 function Home() {
     const [activeButton, setActiveButton] = useState("campaign");

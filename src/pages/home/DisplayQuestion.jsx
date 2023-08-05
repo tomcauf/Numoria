@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 function DisplayQuestion(props) {
-  const [showGameBox, setShowGameBox] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
 
   useEffect(() => {
-    let digit = props.level.main + 2;
-    let time = 200 * Math.min(digit, 5) + 400 * Math.max(digit - 5, 0);
-    let number = document.getElementById("number");
-    setTimeout(() => {
-      number.innerHTML = number.innerHTML.replace(/\w|W/gi, "&#183;");
-    }, time);
-  }, [props.level.main, props.level.sub, props.error]);
+    if (gameStarted) {
+      let digit = props.level.main + 2;
+      let time = 200 * Math.min(digit, 5) + 400 * Math.max(digit - 5, 0);
+      let number = document.getElementById("number");
+      setTimeout(() => {
+        number.innerHTML = number.innerHTML.replace(/\w|W/gi, "&#183;");
+        setGameStarted(true);
+      }, time);
+    }
+  }, [props.level.main, props.level.sub, props.error, props.question]);
 
-  const handleStartClick = () => {
-    setShowGameBox(true);
+  const handleGameStart = () => {
+    setGameStarted(true);
+    props.onClick();
   };
 
   return (
@@ -25,17 +29,17 @@ function DisplayQuestion(props) {
           </p>
           <p className="mistakes">Error: {props.error}/3</p>
         </div>
-        {showGameBox ? (
-          <div className="game-box">
+        <div className="game-box">
+          {gameStarted ? (
             <p className="number" id="number">
               {props.error < 3 ? atob(props.question) : "????"}
             </p>
-          </div>
-        ) : (
-          <button className="start-button" onClick={handleStartClick}>
-            Start
-          </button>
-        )}
+          ) : (
+            <p className="game-start" onClick={handleGameStart}>
+              Start
+            </p>
+          )}
+        </div>
       </div>
       <br />
     </>

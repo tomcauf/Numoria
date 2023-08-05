@@ -142,3 +142,22 @@ button {
 .mistakes {
     color: var(--error-color);
 }
+.disabled {
+    display: none;
+}
+.memorygame {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+.blur {
+    filter: blur(3px);
+}
+
+.game-start {
+    cursor: pointer;
+}
+.game-start:hover {
+    filter: brightness(1.2);
+    filter: drop-shadow(0px 0px 5px var(--main-color));
+    transition: var(--ease-out-duration);
+}

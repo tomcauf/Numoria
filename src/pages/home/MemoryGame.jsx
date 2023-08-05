@@ -9,15 +9,17 @@ function MemoryGame() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  const [question, setQuestion] = useState(btoa(randomGenerate(3)));
+  const [question, setQuestion] = useState('');
   const [level, setLevel] = useState({ main: 1, sub: 1 });
   const [error, setError] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
 
   const resetState = useCallback(() => {
-    setQuestion(btoa(randomGenerate(3)));
-    setLevel({ main: 1, sub: 1 });
+    let digit = level.main + 2;
+    setQuestion(btoa(randomGenerate(digit)));
+    setLevel({ main: level.main, sub: 1 });
     setError(0);
-  }, []);
+  }, [level]);
 
   const compareUserInput = useCallback((userNumber) => {
     let currentQuestion = question;
@@ -42,19 +44,26 @@ function MemoryGame() {
     setError(currentError);
   }, [level, question, error]);
 
+  const handleStart = useCallback(() => {
+    setGameStarted(true);
+    resetState();
+  }, [resetState]);
+
   return (
-    <div className="main">
-      <DisplayQuestion
-        question={question}
-        level={level}
-        error={error}
-      />
-      <UserInputForm
-        compareUserInput={compareUserInput}
-        error={error}
-        onReset={resetState}
-      />
-    </div>
+    <>
+        <DisplayQuestion
+          question={question}
+          level={level}
+          error={error}
+          onClick={handleStart}
+        />
+        <UserInputForm
+          compareUserInput={compareUserInput}
+          error={error}
+          onReset={resetState}
+          gameStarted={gameStarted}
+        />
+    </>
   );
 }
 

@@ -7,17 +7,32 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Firebase cache
+.firebase/
+
+#Firebase config
+src/config/firebase-config.jsx
+
+# Mac files
+.DS_Store
+
+# Dependencies
 node_modules
 package-lock.json
 dist
 dist-ssr
 *.local
 
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj

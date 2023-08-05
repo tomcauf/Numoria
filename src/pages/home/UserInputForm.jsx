@@ -17,7 +17,8 @@ function UserInputForm(props) {
   let layout;
   if (props.error < 3) {
     layout = (
-      <div className="input-box">
+      //Si props.gameStarted est true, je n'affiche pas de class, sinon afficher la class blur
+    <div className={`input-box ${props.gameStarted ? '' : 'blur'}`}>
         <form onSubmit={handleUserInput}>
           Number is:
           <input
@@ -26,11 +27,12 @@ function UserInputForm(props) {
             ref={userNumberRef}
             required
             autoFocus
+            disabled={props.gameStarted ? '' : 'disabled'}
           />
           <br />
           <br />
         </form>
-        <button onClick={handleReset}>Restart</button>
+        <button onClick={handleReset} disabled={props.gameStarted ? '' : 'disabled'}>Restart</button>
       </div>
     );
   } else {
