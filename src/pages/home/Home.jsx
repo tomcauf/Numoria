@@ -4,6 +4,7 @@ import "../../css/Home.css";
 
 function Home() {
     const [activeButton, setActiveButton] = useState("campaign");
+
     const handleButtonClick = (button) => {
         setActiveButton(button);
     };

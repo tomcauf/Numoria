@@ -25,7 +25,10 @@ body {
   overflow-x: hidden;
   padding: 0;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 ul, li {
   list-style: none;
   padding: 0;
@@ -85,9 +88,83 @@ button:focus-visible {
   background-color: var(--sub-color);
 }
 
+.fa-leaderboard {
+  -webkit-mask-image: url(./assets/images/leaderboard.svg);
+  mask-image: url(./assets/images/leaderboard.svg);
+}
+
+.fa-settings {
+  -webkit-mask-image: url(./assets/images/settings.svg);
+  mask-image: url(./assets/images/settings.svg);
+}
+
+.fa-notification {
+  -webkit-mask-image: url(./assets/images/notification.svg);
+  mask-image: url(./assets/images/notification.svg);
+}
+
+.fa-unregistered {
+  -webkit-mask-image: url(./assets/images/unregistered.svg);
+  mask-image: url(./assets/images/unregistered.svg);
+}
+
+.fa-logged {
+  -webkit-mask-image: url(./assets/images/logged.svg);
+  mask-image: url(./assets/images/logged.svg);
+}
+
+.fa-login-add {
+  -webkit-mask-image: url(./assets/images/login-add.svg);
+  mask-image: url(./assets/images/login-add.svg);
+}
+
+.fa-logout {
+  -webkit-mask-image: url(./assets/images/logout.svg);
+  mask-image: url(./assets/images/logout.svg);
+}
+
+.fa-contact {
+  -webkit-mask-image: url(./assets/images/contact.svg);
+  mask-image: url(./assets/images/contact.svg);
+}
+
+.fa-support {
+  -webkit-mask-image: url(./assets/images/support.svg);
+  mask-image: url(./assets/images/support.svg);
+}
+
+.fa-code {
+  -webkit-mask-image: url(./assets/images/code.svg);
+  mask-image: url(./assets/images/code.svg);
+}
+
+.fa-security {
+  -webkit-mask-image: url(./assets/images/security.svg);
+  mask-image: url(./assets/images/security.svg);
+}
+
+.fa-privacy {
+  -webkit-mask-image: url(./assets/images/privacy.svg);
+  mask-image: url(./assets/images/privacy.svg);
+}
 .textButton:focus, .textButton:hover * {
-  color: #CCCCB5;
+  color: var(--text-color);
 }
 .textButton:hover i {
-  background-color: #CCCCB5;
+  background-color: var(--text-color);
+}
+
+.form-button:hover i {
+  background-color: var(--sec-color);
+}
+
+.form-button i {
+  background-color: var(--sec-color);
+}
+.btn-disabled {
+  filter: brightness(0.5);
+}
+.btn-disabled:hover {
+  background-color: var(--main-color);
+  cursor: not-allowed;
 }

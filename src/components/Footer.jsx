@@ -13,10 +13,10 @@ function Footer() {
             <i className="fas fa-support"></i>
             <p>Support</p>
           </div>
-          <div className="textButton">
+          <a className="textButton" href='https://github.com/tomcauf/Numoria' target='_blank'>
             <i className="fas fa-code"></i>
             <p>Github</p>
-          </div>
+          </a>
           <div className="textButton">
             <i className="fas fa-security"></i>
             <p>Security</p>

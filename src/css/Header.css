@@ -15,36 +15,6 @@ header h1 {
     color: #CCCCB5;
 }
 
-.fa-leaderboard {
-    -webkit-mask-image: url(../assets/images/leaderboard.svg);
-    mask-image: url(../assets/images/leaderboard.svg);
-}
-
-.fa-settings {
-    -webkit-mask-image: url(../assets/images/settings.svg);
-    mask-image: url(../assets/images/settings.svg);
-}
-
-.fa-notification {
-    -webkit-mask-image: url(../assets/images/notification.svg);
-    mask-image: url(../assets/images/notification.svg);
-}
-
-.fa-unregistered {
-    -webkit-mask-image: url(../assets/images/unregistered.svg);
-    mask-image: url(../assets/images/unregistered.svg);
-}
-
-.fa-logged {
-    -webkit-mask-image: url(../assets/images/logged.svg);
-    mask-image: url(../assets/images/logged.svg);
-}
-
-.fa-logout {
-    -webkit-mask-image: url(../assets/images/logout.svg);
-    mask-image: url(../assets/images/logout.svg);
-}
-
 @media screen and (max-width: 62.5rem) {}
 
 @media screen and (max-width: 34.375rem) {
